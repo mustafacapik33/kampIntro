@@ -6,31 +6,34 @@
         int yas = 18;
 
         Kurs kurs1 = new Kurs();
-        kurs1.kursAdi = "C#";
-        kurs1.kursunEgitmeni = "engin demiroğ";
-        kurs1.izlenmeOrani = 68;
+        kurs1.KursAdi = "C#";
+        kurs1.KursunEgitmeni = "engin demiroğ";
+        kurs1.IzlenmeOrani = 68;
 
         Kurs kurs4 = new Kurs();
-        kurs4.kursAdi = "HERBOKOLOG";
-        kurs4.kursunEgitmeni = "MUSTAFA ARSLAN ";
-        kurs4.izlenmeOrani = 500;
+        kurs4.KursAdi = "HERBOKOLOG";
+        kurs4.KursunEgitmeni = "MUSTAFA ARSLAN ";
+        kurs4.IzlenmeOrani = 500;
 
         Kurs kurs2 = new Kurs();
-        kurs2.kursAdi = "Java";
-        kurs2.kursunEgitmeni = "celil unver";
-        kurs2.izlenmeOrani = kurs4.izlenmeOrani + 5;
+        kurs2.KursAdi = "Java";
+        kurs2.KursunEgitmeni = "celil unver";
+        kurs2.IzlenmeOrani = kurs4.IzlenmeOrani + 5;
 
-        Kurs kurs3 = new Kurs();
-        kurs3.kursAdi = "phyton";
-        kurs3.kursunEgitmeni = "halil unver ";
-        kurs3.izlenmeOrani = 200;
+        Kurs kurs3 = new ()
+        {
+            KursAdi = "phyton",
+            KursunEgitmeni = "halil unver ",
+            IzlenmeOrani = 200,
+            KursTarihi = DateTime.Now
+        };
 
 
-        Kurs[] kurslar = new Kurs[] { kurs1, kurs2, kurs3,kurs4 };
+        Kurs[] kurslar = [kurs1, kurs2, kurs3,kurs4];
 
         foreach (Kurs kurs  in  kurslar)
         {
-            Console.WriteLine(kurs.kursAdi + ":" + kurs.kursunEgitmeni + "=" + kurs.izlenmeOrani);
+            Console.WriteLine(kurs.KursAdi + ":" + kurs.KursunEgitmeni + "=" + kurs.IzlenmeOrani);
         }
 
         //Console.WriteLine( kurs1.kursAdi+ "" + kurs1.kursunEgitmeni);
@@ -40,10 +43,11 @@
 
     class Kurs 
     {
-        public string kursAdi { get; set; }
+        public string KursAdi { get; set; }
         
-        public string kursunEgitmeni { get; set; }
+        public string KursunEgitmeni { get; set; }
         
-        public int izlenmeOrani { get; set; }
+        public int IzlenmeOrani { get; set; }
+        public DateTime KursTarihi { get; set; }
     }
 }
